@@ -5,6 +5,14 @@
 {% block content %}
 <div class="container" id="main-content" tabindex="-1">
       <!-- The main page content -->
-      
+      <div class="row">
+            <div class="col">
+                <img src="http://placehold.it/1340x500" class="img-fluid"/>
+            </div>
+      </div>
+      {% include "partials/interior-content-side-bar.njk" %}
+      {% include "partials/interior-fullwidth-image.njk" %}
+      {% include "partials/interior-content.njk" %}
+      {% include "partials/interior-article-grid.njk" %}
 </div>
 {% endblock %}
