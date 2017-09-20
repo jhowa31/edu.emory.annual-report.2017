@@ -172,7 +172,6 @@ buildtasks.forEach(function(taskName){
   })
 });
 
-
 gulp.task('watch:build', ['build'], function(){
   gulp.watch(normalizePath(getConfig().css.source), ['serve:reload:build:css']).on('change', logFileChange);
   gulp.watch(normalizePath(getConfig().js.source), ['serve:reload:build:js']).on('change', logFileChange);
