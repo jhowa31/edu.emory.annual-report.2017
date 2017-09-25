@@ -1,6 +1,9 @@
+// body {
+//     font-family: 'Open Sans', sans-serif;
+// }
+// h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+//     font-family: 'PT Sans', serif;
+// }
 body {
-    font-family: 'Open Sans', sans-serif;
-}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'PT Sans', serif;
+    background-color: lighten(palette('neutrals', 'gray', 'lighter') , 7);
 }

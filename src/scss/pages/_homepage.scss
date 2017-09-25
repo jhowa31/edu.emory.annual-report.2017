@@ -1,23 +1,77 @@
 .homepage {
     
-    .letter {
-        background-color: palette('neutrals', 'gray', 'lighter');
-        padding: $standard-padding 0;
-    }
-    
-    
     .homepage-opener {
         position: absolute;
         top: 30px;
         left: 50px;
+        .homepage-opener-h1 {
+            color: #ffd24d;
+        }
+        .homepage-opener-p {
+            font-size: 24px;
+            color: white;
+        }
     }
-    .homepage-opener-p {
-        font-size: 24px;
-        color: white;
+
+    .letter {
+        background-color: palette('neutrals', 'gray', 'lighter');
+        padding: $standard-padding 0;
+        h1 {
+            font-size: 1.5rem;
+            span {
+                display:block;
+                padding-bottom:0.5rem;
+                border-bottom: 3px solid palette('primary', 'yellow');
+                margin-bottom:1rem;
+                font-weight:300;
+                font-size:1.6rem;
+            }
+            small {
+                clear:both;
+                display:block;
+                margin-bottom:1rem;
+                font-weight:700;
+            }
+        }
     }
-    .homepage-opener-h1 {
-        color: #ffd24d;
+
+    .content-section {
+        background-color: #fff;
+        .border.border-section-title {
+            position: relative;
+            border-color: palette('neutrals', 'gray', 'gray') !important;
+            &:after {
+                content:" ";
+                display:block;
+                width: 50%;
+                height: 3px;
+                background-color: palette('primary','yellow');
+                bottom:-1px;
+                right:0;
+                position: absolute;
+            }
+        }
+        .homepage-title {
+            font-size: 3rem;
+            font-weight: 300;
+            @media screen and (min-width: map-get($grid-breakpoints, lg )){
+                font-size: 4rem;
+            }
+        }
+        .homepage-text {
+            .lead {
+                font-weight: 500;
+            }
+        }
+        .row-feature {
+            background-color: palette('neutrals', 'gray', 'lighter');
+        }
     }
+    
+    
+    
+    
+    
 }
 
 
