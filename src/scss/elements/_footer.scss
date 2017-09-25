@@ -1,0 +1,14 @@
+#footer {
+    border-top: 5px solid palette("primary", "blue");
+    padding: $standard-padding 0;
+    background-color: lighten(palette("neutrals", "gray"),10);
+    a {
+        color: palette("neutrals", "white");
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+    .copyright {
+        padding-top: $standard-padding/2;
+        color: palette("neutrals", "gray", "light");
+    }
+}
