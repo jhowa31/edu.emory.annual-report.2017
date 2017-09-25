@@ -3,20 +3,48 @@
 <title>Homepage | {{ siteName }}</title>
 {% endblock %} 
 {% block content %}
-<div class="container" id="main-content" tabindex="-1">
-      <!-- The main page content -->
-    <div class="row">
-        <div class="col-12">
-            <img src="../_includes/images/emory-gate.jpg" class="img-fluid"/>
-            <div class="homepage-opener">
-                <p class="homepage-opener-p">Annual Report of the President </p>
-                <h1 class="homepage-opener-h1" >Emory <span>&#187;</span> Forward</h1>
-            </div>
-        </div>
-    </div>
-    {% include "partials/homepage-letter.njk" %}
-    {% include "partials/homepage-fullwidth-image.njk" %}
-    {% include "partials/homepage-content.njk" %}
-    {% include "partials/homepage-grid-container.njk" %}
+<div class="container homepage" id="main-content" tabindex="-1">
+  <!-- The main page content -->
+  <div class="row">
+      <div class="col-12">
+          <img src="../_includes/images/emory-gate.jpg" class="img-fluid"/>
+          <div class="homepage-opener">
+              <p class="homepage-opener-p">Annual Report of the President </p>
+              <h1 class="homepage-opener-h1" >Emory <span>&#187;</span> Forward</h1>
+          </div>
+      </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="navbar-brand d-lg-none d-xl-none">Emory &#187; Forward</div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContentSections" aria-controls="navbarSupportedContentSections" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContentSections">
+        <ul class="navbar-nav nav-fill w-100 ">
+          <li class="nav-item"><a class="nav-link" data-smooth-scroll="true" href="#global">Global Impact</a></li>
+          <li class="nav-item"><a class="nav-link" data-smooth-scroll="true" href="#caring">Caring and Healing</a></li>
+          <li class="nav-item"><a class="nav-link" data-smooth-scroll="true" href="#knowledge">Creating Knowledge</a></li>
+          <li class="nav-item"><a class="nav-link" data-smooth-scroll="true" href="#educating">Educating the Next Generation</a></li>
+          <li class="nav-item"><a class="nav-link" data-smooth-scroll="true" href="#transforming">Transforming Society</a></li>
+          <li class="nav-item"><a class="nav-link" data-smooth-scroll="true" href="#atlanta">Emory in Atlanta</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    
+
+    <article>
+      {% include "partials/homepage-letter.njk" %}
+      {% set sectionArr = ['global', 'caring', 'knowledge', 'educating', 'transforming', 'atlanta'] %}
+      {% for section in sectionArr %}
+      <section class="content-section">
+        <a name="{{ section }}" id="{{ section }}"></a>
+        {% include "partials/homepage-fullwidth-image.njk" %}
+        {% include "partials/homepage-content.njk" %}
+        {% include "partials/homepage-grid-container.njk" %}
+      </section>
+      {% endfor %}
+    </article>
 </div>
 {% endblock %}

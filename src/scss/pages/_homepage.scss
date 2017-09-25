@@ -1,0 +1,25 @@
+.homepage {
+    
+    .letter {
+        background-color: palette('neutrals', 'gray', 'lighter');
+        padding: $standard-padding 0;
+    }
+    
+    
+    .homepage-opener {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+    }
+    .homepage-opener-p {
+        font-size: 24px;
+        color: white;
+    }
+    .homepage-opener-h1 {
+        color: #ffd24d;
+    }
+}
+
+
+
+

@@ -1,0 +1,10 @@
+#header {
+    .navbar-brand {
+        max-width: calc(100% - 75px);
+        img {
+            @media screen and (min-width: map-get($grid-breakpoints,md)) {
+                max-width: 350px;
+            }
+        }
+    }
+}

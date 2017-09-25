@@ -1,0 +1,6 @@
+.container {
+    @media screen and (max-width : (map-get($grid-breakpoints, md) - 1) ) {
+        padding-left: 0;
+        padding-right:0;
+    }
+}
